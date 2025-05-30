@@ -1,78 +1,84 @@
 ---
-title: "Create,edit and delete projects"
-summary: "Create, edit and delete projects in the work section of your Magic Portfolio."
-publishedAt: "2025-04-19"
-tag: "Magic Portfolio"
+title: "Advanced Concepts in Machine Learning: Algorithms, Evaluation, and Challenges"
+summary: "An in-depth exploration of advanced machine learning techniques, evaluation metrics, and practical challenges faced in real-world applications."
+publishedAt: "2025-05-30"
+tag: "Machine Learning"
 ---
 
-## Manage projects
+## Introduction
 
-You can create, edit and delete projects by adding, modifying or removing `*.mdx` files in the `src/app/work/projects` directory.
+Machine Learning (ML) has evolved far beyond simple predictive models. Advanced ML techniques power cutting-edge applications such as natural language processing, computer vision, and reinforcement learning agents. This article explores some of these techniques, how we evaluate ML models, and common challenges faced during deployment.
 
-## Frontmatter
+---
 
-The frontmatter is used to set the project's metadata: title, description, image, and tags. It's used in the project's page and in meta- and open graph tags.
+## Advanced ML Algorithms
 
-<CodeBlock
-    marginBottom="16"
-    codeInstances={[
-      {
-        code:
-`---
-title: "Developing a design system for indie creators"
-publishedAt: "2025-03-17"
-summary: "Once UI is a design system that empowers indie creators, small teams, and startups to build web applications."
-images:
-  - "/images/projects/project-01/cover-02.jpg"
-  - "/images/projects/project-01/image-03.jpg"
-team:
-  - name: "Lorant One"
-    role: "Software Engineer"
-    avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
-link: "https://once-ui.com/"
----`,
-        language: "tsx",
-        label: "src/app/work/projects/project-1.mdx"
-      }
-    ]}
-/>
+### 1. Ensemble Methods
 
-## MDX syntax
+Ensemble learning combines multiple models to improve prediction accuracy and robustness.
 
-You can use MDX to write the content of your projects. It helps you write rich and dynamic content with minimal code. Some MDX elements will be automatically transformed to Once UI components to integrate better in the design and add additional functionality.
+- **Random Forest:** Uses many decision trees trained on random subsets of data/features; combines predictions by voting.
+- **Gradient Boosting Machines (GBM):** Builds models sequentially, each correcting errors of the previous. Popular implementations include XGBoost, LightGBM, and CatBoost.
+  
+*Why it matters:* Ensemble methods reduce overfitting and increase generalization, often winning ML competitions.
 
-## Custom components
+---
 
-You can use custom components in MDX files, but you need to import them first in the `src/components/mdx.tsx` file.
+### 2. Deep Learning
 
-<CodeBlock
-    marginBottom="16"
-    highlight="11-12"
-    codeInstances={[
-      {
-        code:
-`const components = {
-    p: createParagraph as any,
-    h1: createHeading(1) as any,
-    h2: createHeading(2) as any,
-    h3: createHeading(3) as any,
-    h4: createHeading(4) as any,
-    h5: createHeading(5) as any,
-    h6: createHeading(6) as any,
-    img: createImage as any,
-    a: CustomLink as any,
-    Table,
-    CodeBlock,
-};`,
-        language: "tsx",
-        label: "src/components/mdx.tsx"
-      }
-    ]}
-/>
+Deep Learning uses multi-layered neural networks to model complex patterns.
 
-As you can see, the `Table` and `CodeBlock` components are already imported and available for use. You can add more by simply importing them to this file and passing them to the `components` object.
+- **Convolutional Neural Networks (CNNs):** Excellent for image and video analysis by capturing spatial hierarchies.
+- **Recurrent Neural Networks (RNNs):** Specialized for sequential data like time series and natural language. Variants include LSTM and GRU.
+- **Transformers:** Revolutionized NLP by enabling attention mechanisms, powering models like BERT and GPT.
 
-## Hot reload
+---
 
-Hot reload of MDX files is currently not supported, but we're working on it.
+## Model Evaluation Metrics
+
+Choosing the right evaluation metric depends on the problem type.
+
+| Problem Type       | Common Metrics                    | When to Use                        |
+|--------------------|---------------------------------|----------------------------------|
+| Classification     | Accuracy, Precision, Recall, F1 | Balanced classes or when false positives/negatives have different costs |
+| Regression         | MSE, RMSE, MAE                  | Predicting continuous values      |
+| Ranking/Recommendation | Mean Average Precision (MAP), NDCG | Order-sensitive tasks like search results |
+
+---
+
+## Challenges in Real-World ML
+
+### Data Quality and Quantity
+
+Garbage in, garbage out. Insufficient or noisy data can severely degrade performance. Data preprocessing, augmentation, and cleaning are critical steps.
+
+### Overfitting and Underfitting
+
+- **Overfitting:** Model memorizes training data, poor generalization.
+- **Underfitting:** Model too simple, fails to capture data patterns.
+
+Regularization techniques like L1/L2 penalties, dropout, and early stopping help manage this.
+
+### Interpretability and Bias
+
+Complex models (like deep nets) are often black boxes, making it hard to explain predictions. This raises ethical and regulatory concerns, especially in sensitive fields like healthcare or finance.
+
+---
+
+## Practical Tips for ML Projects
+
+- **Feature Engineering:** The most impactful step; creating meaningful input features improves model accuracy.
+- **Cross-Validation:** Use k-fold cross-validation to get reliable estimates of model performance.
+- **Hyperparameter Tuning:** Tools like Grid Search, Random Search, or Bayesian Optimization help find the best model settings.
+- **Deployment:** Consider scalability, latency, and monitoring for model drift in production.
+
+---
+
+## Conclusion
+
+Advanced machine learning blends powerful algorithms with rigorous evaluation and thoughtful handling of real-world constraints. Mastery of these topics empowers engineers to build scalable, reliable AI systems that create genuine business value.
+
+---
+
+If you'd like, I can also provide example code snippets or visual diagrams to complement this article!
+

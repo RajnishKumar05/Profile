@@ -1,0 +1,73 @@
+---
+title: "Pavement Crack Detection Using Convolutional Neural Networks (CNN)"
+publishedAt: "2025-05-30"
+summary: "Built a real-time pavement crack detection model using CNN and fine-tuned YOLO architecture, enabling efficient road damage monitoring."
+team:
+  - name: "Abnish Sharma"
+    role: "Machine Learning Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/your-profile/"
+---
+
+## Overview
+
+Pavement cracks are a major cause of road deterioration that can lead to safety hazards and increased maintenance costs. This project uses Convolutional Neural Networks (CNNs) to detect cracks in road surfaces in real-time, facilitating early detection and efficient maintenance.
+
+Using a fine-tuned YOLO (You Only Look Once) architecture, the system can process images captured from road inspections and identify cracks quickly and accurately.
+
+---
+
+## Dataset Collection and Preprocessing
+
+- **Image Acquisition:** Thousands of road surface images were collected from open datasets and vehicle-mounted cameras.
+- **Annotation:** Cracks were manually labeled with bounding boxes using annotation tools.
+- **Preprocessing Steps:**
+  - Images resized to 416x416 pixels to suit YOLO input.
+  - Data augmentation techniques like rotation, flipping, and brightness changes improved generalization.
+  - Pixel values normalized to [0,1] range.
+
+---
+
+## Model Architecture and Training
+
+- **YOLO Framework:** A CNN-based real-time object detector known for its speed and accuracy.
+- **Backbone:** Darknet-53 pre-trained on ImageNet, fine-tuned to detect pavement cracks.
+- **Loss Function:** Combined localization, confidence, and classification loss.
+- **Training Details:** 
+  - Adam optimizer with scheduled learning rate.
+  - 50 epochs with batch size of 16.
+  - Early stopping to prevent overfitting.
+
+---
+
+## Real-Time Inference Pipeline
+
+- Video feed frames captured by cameras on inspection vehicles.
+- Frames passed to the trained YOLO CNN to detect and localize cracks.
+- Outputs bounding boxes with confidence scores displayed in real-time.
+
+---
+
+## Performance and Results
+
+- Achieved a mean average precision (mAP) of 87%.
+- Real-time inference at 30 frames per second on NVIDIA RTX GPUs.
+- Robust detection under varying lighting and weather conditions.
+
+---
+
+## Demo
+
+Try the real-time crack detector live [here](https://huggingface.co/spaces/rj2537580/crackdetector).
+
+---
+
+## Future Work
+
+- Extend detection to other road damages like potholes.
+- Deploy the model on edge devices for field usage.
+- Use time-series analysis for crack progression monitoring.
+
+---
+
+If you want, I can help you with sample code for training the model, data preprocessing, or setting up real-time inference pipelines. Just ask!

@@ -29,17 +29,17 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/RajnishKumar05",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "www.linkedin.com/in/itsrajnish",
   },
   {
     name: "X",
     icon: "x",
-    link: "",
+    link: "https://x.com/Rajnish82157765",
   },
   {
     name: "Email",
@@ -81,7 +81,7 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://www.linkedin.com/in/rajnish-kumar-sharma-a583ab227/",
   },
   intro: {
     display: true,
@@ -129,11 +129,11 @@ const about = {
     institutions: [
       {
         name: "Madhav Institute of Technology & Science",
-        description: <>Studied software engineering.</>,
+        description: <>Internet of Things</>
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name:"Indian Institute of Technology Kanpur- NPTEL",
+        description: <>Foundation of Cloud IoT Edge ML</>
       },
     ],
   },
