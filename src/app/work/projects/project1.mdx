@@ -1,0 +1,61 @@
+---
+title: "Environment Monitoring Robot with Real-Time Dashboard"
+publishedAt: "2025-05-30"
+summary: "Designed and built an IoT robot with ESP32 to monitor air quality, temperature, and humidity in real-time, featuring a Next.js-based dashboard and AI-powered insights."
+team:
+  - name: "Abnish Sharma"
+    role: "IoT & AI Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/your-profile/"
+---
+
+<div style={{width: "100%", height: "400px", marginBottom: "2rem"}}>
+  <iframe
+    width="100%"
+    height="100%"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    title="Environment Monitoring Robot Demo"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  />
+</div>
+
+## Overview
+
+This project involves the design and construction of an IoT-based robot using the ESP32 microcontroller to monitor key environmental parameters such as air quality, temperature, and humidity in real-time. The robot collects sensor data and transmits it wirelessly to a web dashboard for live visualization and analysis.
+
+A C++ backend component manages communication with a FastAPI service that hosts a Large Language Model (LLM). This service processes the sensor data and returns intelligent suggestions and insights, which are displayed on the dashboard.
+
+## Key Features
+
+- **IoT Robot Hardware**: ESP32-based system with air quality, temperature, and humidity sensors.
+- **Real-Time Dashboard**: Built with Next.js offering a responsive, soft UI for live monitoring and data analysis.
+- **Wireless Communication**: MQTT and HTTP protocols for reliable data transmission.
+- **C++ Backend**: Handles communication between the ESP32 data stream and the FastAPI LLM service.
+- **FastAPI Service**: Hosts the LLM model that analyzes sensor inputs and generates actionable insights.
+- **AI-Powered Recommendations**: Intelligent suggestions to support smart agriculture and environmental awareness.
+
+## Technologies Used
+
+- **ESP32 & C++**: Sensor data acquisition and backend communication.
+- **FastAPI (Python)**: API service hosting the LLM for sensor data analysis.
+- **Next.js & React**: Web dashboard frontend for visualization.
+- **MQTT / HTTP**: Protocols for data transport.
+- **Sensors**: MQ135 (air quality), DHT11/DHT22 (temperature, humidity).
+- **Large Language Model (LLM)**: AI component for insight generation.
+
+## Challenges and Solutions
+
+- **Multi-Language Integration**: Coordinated C++ backend with FastAPI Python service via REST APIs.
+- **Sensor Data Accuracy**: Applied calibration and filtering to ensure reliable measurements.
+- **Real-Time UI Updates**: Used React hooks and optimized state management for smooth dashboard performance.
+- **Robust Communication**: Designed fault-tolerant messaging to handle network variability.
+
+## Outcome
+
+The system delivers a robust environmental monitoring solution with real-time data visualization and AI-powered insights. It enables users to make data-driven decisions for agriculture and climate-related applications, with a modular architecture supporting future expansions.
+
+---
+
+If you want, I can help you with sample code for the C++ to FastAPI communication or integrating the LLM with your dashboard! Just say the word.
