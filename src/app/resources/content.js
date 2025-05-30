@@ -58,7 +58,7 @@ const home = {
   featured: {
     display: true,
     title: <>Recent project: <strong className="ml-4">Health AI website</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/project0"
   },
   subline: (
     <>
