@@ -34,7 +34,7 @@ const social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "www.linkedin.com/in/itsrajnish",
+    link: "https://www.linkedin.com/in/itsrajnish/",
   },
   {
     name: "X",
@@ -81,7 +81,7 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://www.linkedin.com/in/rajnish-kumar-sharma-a583ab227/",
+    link: "https://www.linkedin.com/in/itsrajnish/",
   },
   intro: {
     display: true,
