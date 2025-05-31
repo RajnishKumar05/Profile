@@ -98,7 +98,7 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "IEEE MITS Chaper",
+        company: "IEEE MITS Chapter",
         timeframe: "2022 - 2025",
         role: "Web Developer",
         achievements: [
